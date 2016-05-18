@@ -1,0 +1,22 @@
+.gradient-background{
+background-image: -o-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
+background-image: -moz-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
+background-image: -webkit-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
+background-image: -ms-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
+background-image: linear-gradient(to right, #51F7DB 0%, #036FFC 100%);
+}
+.site__title {
+    color: rgb(243, 86, 38);
+    background-image: -webkit-linear-gradient(92deg, rgb(243, 86, 38), rgb(254, 171, 58));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 60s linear infinite;
+    animation-name: hue;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-delay: initial;
+    animation-iteration-count: infinite;
+    animation-direction: initial;
+    animation-fill-mode: initial;
+    animation-play-state: initial;
+}

@@ -26,7 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap', '~> 4.0.0.alpha3'
 #Build RedCarpet
 gem 'redcarpet'
-
+#Add FontAwesome
+gem 'font-awesome-sass'
+#Implement Animation
+gem "animate-rails"
 
 
 # Use ActiveModel has_secure_password
