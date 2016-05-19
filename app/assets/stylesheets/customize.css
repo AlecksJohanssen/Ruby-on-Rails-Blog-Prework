@@ -27,7 +27,6 @@ font-color:#fff;
 color: #fff;
 border-color: #fff;
 }
-
 /*Blog title color*/
 .blog_title {
     color: #f35626;
@@ -88,6 +87,7 @@ html {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   width: 100%;
+  padding-top: 3rem;
   overflow: hidden-x;
   text-align: center;
 }
