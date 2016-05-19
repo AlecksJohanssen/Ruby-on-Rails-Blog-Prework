@@ -12,6 +12,14 @@ border-color: #fff!important;
 .blog_header {
   -webkit-animation: bounceInUp 1s;
 }
+.outline
+{
+font:"Roboto";
+font-color:#fff;
+color: #fff;
+border-color: #fff;
+}
+
 /*Blog title color*/
 .blog_title {
     color: #f35626;
@@ -50,16 +58,7 @@ border-color: #fff!important;
 .subhead {
   	font:"Roboto";
   	font-size: 2rem;
-  color: #7b8993;
-}
-h1 {
-    display: block;
-    font-size: 2rem;
-    -webkit-margin-before: 0.67em;
-    -webkit-margin-after: 0.67em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    font-weight: 300;
+  	color: #7b8993;
 }
 html {
   font: 100%/1.5 "Roboto", Verdana, sans-serif;

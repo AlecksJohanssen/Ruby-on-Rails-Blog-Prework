@@ -17,7 +17,6 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-light bg-faded navbar-fixed-top gradient-background ">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -42,17 +41,27 @@
     </ul>
 <div class="collapse navbar-collapse" id="myNavbar">
   <ul class="nav pull-right"?>
-    <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    <ul class="nav navbar-nav navbar-right outline">
+        <li><a href="#"><span class="glyphicon glyphicon-user outline"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in outline"></span> Login</a></li>
     </ul>
   </ul>
 </div>
   </div>
 </nav>
 <div class="container" >
-  
-</div>
-
+  <div class="row">
+    <div class="col-md-4">
+      <%= yield %>   
+        <div class="wrap">
+          <div class="card-block" style="padding-top:120px">
+            <h4 class="card-title">Alecks Johanssen </h4>
+            <p class="card-text introduction" style="text-align: justify;">This is my prework for Ruby class of Coderschool. Thank @Charles for give me this chance. I've improved it a little bit to make sure that I'm good enough to join this class.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>   
+</div>    
 </body>
-<%= yield %>
+
