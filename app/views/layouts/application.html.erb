@@ -52,13 +52,18 @@
 <div class="container" >
   <div class="row">
     <div class="col-md-4">
-      <%= yield %>   
-        <div class="wrap">
-          <div class="card-block" style="padding-top:120px">
-            <h4 class="card-title">Alecks Johanssen </h4>
-            <p class="card-text introduction" style="text-align: justify;">This is my prework for Ruby class of Coderschool. Thank @Charles for give me this chance. I've improved it a little bit to make sure that I'm good enough to join this class.
+      <%= yield %> 
+      <div class="wrap">
+        <div class="card content">
+        <%= image_tag("mrharley.jpg", :alt => "Blog Image") %>
+          <div class="card-block " style="padding-top:30px">
+            <h4 class="card-title ">Alecks Johanssen's Blog</h4>
+            <p class="card-text body_text" style="text-align: justify;">Hello CoderSchool, thank you for taking time to read this blog. I'm Alecks Johanssen and next to me is the the most awesomeness teacher I have ever met :P, I'm proudly to introduce to you my very first Ruby on Rails Application. To get started please click the Button below!.
             </p>
         </div>
+      </div>
+      <div class="card-footer">
+      <button class="btn-button">Get Started</button>
       </div>
     </div>
   </div>   
