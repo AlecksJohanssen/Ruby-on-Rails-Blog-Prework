@@ -1,0 +1,26 @@
+
+
+<div class='card'>
+<div class="card-header text-xs-center"> Sign In</div>
+<div class="card-block">
+    
+    
+    <%= form_tag login_sessions_path,class:'', method: :post do %>
+  <div class="field form-group">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, "", class: 'form-control' %>
+  </div>
+  <div class="field form-group">
+    <%= label_tag :password %>
+    <%= password_field_tag :password, "", class: 'form-control' %>
+  </div>
+  <div class="actions form-group text-xs-center">
+      <%= submit_tag "Login", :class => 'btn btn-success' %>
+  </div>
+<% end %>
+    <% else %> 
+ <center><%= link_to "Sign Out", logout_path, class: 'btn btn-warning' %></center>
+    
+</div>
+</div>
+
