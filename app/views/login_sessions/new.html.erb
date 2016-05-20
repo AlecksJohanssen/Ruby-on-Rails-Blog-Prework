@@ -1,4 +1,4 @@
-
+<style> #intro-image {display:none} </style>
 <nav class="navbar navbar-light bg-faded navbar-fixed-top gradient-background ">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -18,9 +18,9 @@
   </ul>
 </div>
 </nav>
-<div class="card">
+<div class="card" style="margin-top:160px" >
   <div class="card-header text-xs-center"> Sign In</div>
-    <div class="card-block ">
+    <div class="card-block" >
       <%= form_tag login_sessions_path,class:'', method: :post do %>
         <div class="field form-group">
           <%= label_tag :email %>

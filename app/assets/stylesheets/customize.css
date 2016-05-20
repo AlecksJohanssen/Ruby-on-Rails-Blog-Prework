@@ -20,6 +20,10 @@ border-color: #fff!important;
   font-color:#036FFC;
   font-weight: 200;
 }
+.box-align
+{
+  vertical-align: middle
+}
 .outline
 {
 font:"Roboto";
@@ -49,7 +53,7 @@ border-color: #fff;
   padding: 1.5rem;
 }
 .wrap {
-  max-width: 55rem;
+  max-width: 90rem;
   margin: 0 auto;
 }
 .blog{

@@ -49,10 +49,12 @@
 </div>
 </nav>
 <div class="container" >
-<%= yield %>
-  <div class="row">     
-      <div class="col-md-4">
-      <div class="wrap pull-left">
+  <div class="row">
+    <div class="col-md-8" style="padding-left:400px">
+      <%= yield %>
+  </div>     
+    <div class="col-md-4" id="sidebar">
+      <div class="wrap pull-left" style="padding-left:28rem">
         <div class="card content" id="intro-image" >
           <%= image_tag("mrharley.jpg", :alt => "Blog Image") %>
             <div class="card-block " style="padding-top:30px">
@@ -65,6 +67,5 @@
             <%= link_to "Get Started", login_path, class: 'btn-button' %>           
           </div>
       </div>
-    </div>   
-  </div>    
+    </div>     
 </body>
