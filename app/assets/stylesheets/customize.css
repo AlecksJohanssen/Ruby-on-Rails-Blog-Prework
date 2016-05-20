@@ -58,6 +58,10 @@ border-color: #fff;
 	font-weight: 300;
 	padding-top: 1.5rem;
 }
+.bar-left
+{
+  left:100px;
+}
 .mega {
     font-size: 5.5rem;
     line-height: 1;

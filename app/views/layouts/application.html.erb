@@ -49,11 +49,11 @@
 </div>
 </nav>
 <div class="container" >
-  <div class="row">
-    <div class="col-md-4">
-      <%= yield %> 
-      <div class="wrap">
-        <div class="card content">
+<%= yield %>
+  <div class="row">     
+      <div class="col-md-4">
+      <div class="wrap pull-left">
+        <div class="card content" id="intro-image" >
           <%= image_tag("mrharley.jpg", :alt => "Blog Image") %>
             <div class="card-block " style="padding-top:30px">
               <h4 class="card-title ">Alecks Johanssen's Blog</h4>
@@ -61,10 +61,8 @@
                 </p>
             </div>
         </div>
-          <div class="card-footer ">  
-
-            <%= link_to "Get Started", logins_path, class: 'btn-button' %>
-            
+          <div class="card-footer" id="intro-image">  
+            <%= link_to "Get Started", login_path, class: 'btn-button' %>           
           </div>
       </div>
     </div>   

@@ -1,26 +1,41 @@
 
-
-<div class='card'>
-<div class="card-header text-xs-center"> Sign In</div>
-<div class="card-block">
-    
-    
-    <%= form_tag login_sessions_path,class:'', method: :post do %>
-  <div class="field form-group">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, "", class: 'form-control' %>
-  </div>
-  <div class="field form-group">
-    <%= label_tag :password %>
+<nav class="navbar navbar-light bg-faded navbar-fixed-top gradient-background ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     <a class="navbar-brand " href="#">Alecks's Blog</a>
+    </div>
+<div class="collapse navbar-collapse" id="myNavbar">
+  <ul class="nav pull-right"?>
+    <ul class="nav navbar-nav navbar-right outline">
+        <li><a href="#"><span class="glyphicon glyphicon-user outline"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in outline"></span> Login</a></li>
+    </ul>
+  </ul>
+</div>
+</nav>
+<div class="card">
+  <div class="card-header text-xs-center"> Sign In</div>
+    <div class="card-block ">
+      <%= form_tag login_sessions_path,class:'', method: :post do %>
+        <div class="field form-group">
+          <%= label_tag :email %>
+            <%= text_field_tag :email, "", class: 'form-control' %>
+          </div>
+        <div class="field form-group">
+      <%= label_tag :password %>
     <%= password_field_tag :password, "", class: 'form-control' %>
   </div>
-  <div class="actions form-group text-xs-center">
-      <%= submit_tag "Login", :class => 'btn btn-success' %>
-  </div>
+<div class="actions form-group text-xs-center">
+  <%= submit_tag "Login", :class => 'btn btn-success' %>
+    </div>
 <% end %>
     <% else %> 
- <center><%= link_to "Sign Out", logout_path, class: 'btn btn-warning' %></center>
-    
+ <center><%= link_to "Sign Out", logout_path, class: 'btn btn-warning' %></center>  
 </div>
 </div>
 

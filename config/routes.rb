@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :comments
   end
     resources :tags
-    resources :logins
+    resources :authors
     
     resources :login_sessions, only: [ :new, :create, :destroy ]
 
