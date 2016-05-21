@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'login_sessions/new'
+
+  get 'login_sessions/create'
+
+  get 'login_sessions/destroy'
+
+  resources :users
   resources :articles
   resources :articles
   
@@ -13,7 +20,7 @@ Rails.application.routes.draw do
   resources :comments
   end
     resources :tags
-    resources :authors
+    resources :users
     
     resources :login_sessions, only: [ :new, :create, :destroy ]
 

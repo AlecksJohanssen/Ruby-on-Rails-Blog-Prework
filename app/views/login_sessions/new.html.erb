@@ -1,3 +1,4 @@
+
 <style> #intro-image {display:none} </style>
 <nav class="navbar navbar-light bg-faded navbar-fixed-top gradient-background ">
   <div class="container-fluid">
@@ -21,6 +22,7 @@
 <div class="card" style="margin-top:160px" >
   <div class="card-header text-xs-center"> Sign In</div>
     <div class="card-block" >
+    <% if !logged_in? %>
       <%= form_tag login_sessions_path,class:'', method: :post do %>
         <div class="field form-group">
           <%= label_tag :email %>
@@ -35,7 +37,8 @@
     </div>
 <% end %>
     <% else %> 
- <center><%= link_to "Sign Out", logout_path, class: 'btn btn-warning' %></center>  
+ <center><%= link_to "Sign Out", logout_path, class: 'btn btn-warning' %></center> 
+ <% end %> 
 </div>
 </div>
 
