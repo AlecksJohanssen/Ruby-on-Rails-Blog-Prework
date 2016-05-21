@@ -30,6 +30,8 @@ gem 'redcarpet'
 gem 'font-awesome-sass'
 #Implement Animation
 gem "animate-rails"
+#Authenticate and Security
+gem "sorcery"
 
 
 # Use ActiveModel has_secure_password

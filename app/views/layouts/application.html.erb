@@ -50,7 +50,7 @@
 </nav>
 <div class="container" >
   <div class="row">
-    <div class="col-md-8" style="padding-left:400px">
+    <div class="col-md-8">
       <%= yield %>
   </div>     
     <div class="col-md-4" id="sidebar">
@@ -63,9 +63,13 @@
                 </p>
             </div>
         </div>
-          <div class="card-footer" id="intro-image">  
-            <%= link_to "Get Started", login_path, class: 'btn-button' %>           
-          </div>
+        <div class="card-footer" id="intro-image">
+        <% if logged_in? %>          
+              <%= link_to "Sign Out", logout_path, class: 'btn btn-sm btn-warning' %>                
+            <% else %>  
+            <%= link_to "Get Started", login_path, class: 'btn-button' %>  
+            <% end %>
+            </div>
       </div>
     </div>     
 </body>
