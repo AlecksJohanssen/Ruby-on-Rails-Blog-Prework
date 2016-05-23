@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :users
+  resources :users
   get 'login_sessions/new'
 
   get 'login_sessions/create'

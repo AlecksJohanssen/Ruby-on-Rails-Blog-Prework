@@ -1,14 +1,36 @@
-<p id="notice"><%= notice %></p>
+                <style> #intro-image {display:none} </style>
+                               <div class="card" style="padding-top:150px">
+                    <% if logged_in? %>
+                <nav class="cd-stretchy-nav edit-content">
+            <a class="cd-nav-trigger" href="">
+            </a>
+            <ul>
+                <li><%= link_to raw("<i class=\"fa fa-pencil\"></i>"), edit_article_path(@article), 'data-placement' => "left", 'title' => "Edit Article" %></li>
+                <li> <%= link_to raw("<i class=\"fa fa-trash\"></i>") , @article, method: :delete, data: { confirm: 'Are you sure?' }, :form => { :id => "button-delete" }, 'data-placement' => "left", 'title' => "Delete Article" %></li>
+            </ul>
+                <% end %>
+                <div class="card-block">
+                    <h4 class="card-title"><%= @article.title %></h4>
+                    
+                    <p class="card-text"><%= @markdown.render(@article.body).html_safe %></p>
+                    
+                </div>
+            <div class="card">
+            <div class="card-header"> Comments (<%= @article.comments.size %>)</div>
+            <div class="card-block">
+            
+            <div class="card-text">
+                <%= render partial: 'articles/comment', collection: @article.comments %>   
+                <%= render partial: 'comments/form' %>
+                
+            </div>    
+            </div>
+            </div>
+            
+      
+        
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @article.body %>
-</p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+
+

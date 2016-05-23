@@ -1,0 +1,13 @@
+<div class="row" style="margin-bottom:30px;">
+    <div class="col-md-2">
+        <%= image_tag("user-avatar.jpg", :alt => "Sidebar Image", class: 'user-avatar') %>
+        <% if logged_in? %>
+        <%= button_to 'Delete', [@article, comment], method: :delete, data: { confirm: 'Are you sure?' },class:'comment-delete'  %>
+        <% end %>
+    </div>
+    <div class="col-md-10" style="padding-left:0px;">
+          <span class="label label-default"><%= comment.author_name %></span>
+        <p class="time-distance">Commented <%= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> later</p>
+          <div class="comment"><%= comment.body %></div>
+    </div>
+</div>

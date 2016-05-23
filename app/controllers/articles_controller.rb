@@ -11,6 +11,9 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+      @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    @comment = Comment.new
+    @comment.article_id = @article.id
   end
 
   # GET /articles/new
@@ -58,7 +61,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
     redirect_to(:back)
-    flash[:error] = "Post was destroyed!"
+    flash[:error] = "Article was destroyed!"
     end
 
   private
@@ -69,6 +72,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :tag_list)
     end
 end

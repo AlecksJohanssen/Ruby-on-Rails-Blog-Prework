@@ -1,29 +1,32 @@
-<style> #intro-image {display:none} </style>
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
-          <% @user.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
       </ul>
     </div>
   <% end %>
 <form>
     <fieldset class="field form-group">
-      <%= f.label :email %><br>
-        <%= f.text_field :email, class:'form-control' %>
+        <%= f.label :username %><br>
+    <%= f.text_field :username, class:'form-control' %>
     </fieldset>
-      <fieldset class="field form-group">
-        <%= f.label :password %><br>
-      <%= f.password_field :password, class:'form-control' %>
+    <fieldset class="field form-group">
+         <%= f.label :email %><br>
+    <%= f.text_field :email, class:'form-control' %>
     </fieldset>
-      <fieldset class="field form-group">
-        <%= f.label :password_confirmation %><br>
-          <%= f.password_field :password_confirmation, class:'form-control' %>
-      </fieldset>
+    <fieldset class="field form-group">
+       <%= f.label :password %><br>
+    <%= f.password_field :password, class:'form-control' %>
+    </fieldset>
+    <fieldset class="field form-group">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation, class:'form-control' %>
+    </fieldset>
     <div class="actions">
         <%= f.submit %>
   </div>
