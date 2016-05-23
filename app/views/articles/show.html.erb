@@ -1,15 +1,10 @@
                 <style> #intro-image {display:none} </style>
-                               <div class="card" style="padding-top:150px">
+                               <div class="card" style="margin-top:250px">
                     <% if logged_in? %>
                 <nav class="cd-stretchy-nav edit-content">
-            <a class="cd-nav-trigger" href="">
-            </a>
-            <ul>
-                <li><%= link_to raw("<i class=\"fa fa-pencil\"></i>"), edit_article_path(@article), 'data-placement' => "left", 'title' => "Edit Article" %></li>
-                <li> <%= link_to raw("<i class=\"fa fa-trash\"></i>") , @article, method: :delete, data: { confirm: 'Are you sure?' }, :form => { :id => "button-delete" }, 'data-placement' => "left", 'title' => "Delete Article" %></li>
-            </ul>
+        
                 <% end %>
-                <div class="card-block">
+                <div class="card-block " style="margin-bottom:250px">
                     <h4 class="card-title"><%= @article.title %></h4>
                     
                     <p class="card-text"><%= @markdown.render(@article.body).html_safe %></p>

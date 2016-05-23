@@ -6,7 +6,7 @@
         <% end %>
     </div>
     <div class="col-md-10" style="padding-left:0px;">
-          <span class="label label-default"><%= comment.author_name %></span>
+          <span class="label label-default pull-left"><%= comment.user_name %></span>
         <p class="time-distance">Commented <%= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> later</p>
           <div class="comment"><%= comment.body %></div>
     </div>
