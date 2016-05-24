@@ -23,7 +23,7 @@
 <nav class="navbar navbar-light bg-faded navbar-fixed-top gradient-background ">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand " href="#">Alecks's Blog</a>
+      <a class="navbar-brand " href=<%=articles_path%>>Alecks's Blog</a>
     </div>
   <ul class="nav nav-pills responsive-nav pull-xs-left">
     <li class="nav-item active" style="width:100%">
@@ -56,7 +56,7 @@
   <% end %>
   </div>
 </div>
-    </ul>
+  </ul>
   </ul>
 </div>
 </nav>
@@ -64,16 +64,16 @@
   <div class="row">
     <div class="col-md-8">
       <%= yield %>
-  </div>     
-    <div class="col-md-4" id="sidebar">
-      <div class="wrap pull-left" style="padding-left:28rem">
-        <div class="card content" id="intro-image" >
-          <%= image_tag("mrharley.jpg", :alt => "Blog Image") %>
-            <div class="card-block " style="padding-top:30px">
+    </div>     
+  <div class="col-md-4" id="sidebar">
+    <div class="wrap pull-left" style="padding-left:28rem">
+      <div class="card content" id="intro-image" >
+        <%= image_tag("mrharley.jpg", :alt => "Blog Image") %>
+          <div class="card-block " style="padding-top:30px">
               <h4 class="card-title ">Alecks Johanssen's Blog</h4>
-                <p class="card-text body_text" style="text-align: justify;">Hello CoderSchool, thank you for taking time to read this blog. I'm Alecks Johanssen and next to me is the the most awesomeness teacher I have ever met :P, I'm proudly to introduce to you my very first Ruby on Rails Application. To get started please click the Button below!.
-                </p>
-            </div>
+              <p class="card-text body_text" style="text-align: justify;">Hello CoderSchool, thank you for taking time to read this blog. I'm Alecks Johanssen and next to me is the the most awesomeness teacher I have ever met :P, I'm proudly to introduce to you my very first Ruby on Rails Application. To get started please click the Button below!.
+              </p>
+          </div>
         </div>
         <div class="card-footer" id="intro-image">
         <% if logged_in? %>          
