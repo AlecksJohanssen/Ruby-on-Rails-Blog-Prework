@@ -43,19 +43,17 @@
   <div class="dropdown">
   <% if logged_in? %>
     <button class="btn btn-primary dropdown-toggle" style="margin-top:7.15px" type="button" data-toggle="dropdown"><%= " #{current_user.username}" %>
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#"></a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-user outline">  LogOut</a></li>
-    </ul>
-    <% else %>
+      <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href=<%=logout_path%>><span class="glyphicon glyphicon-user outline">  Logout</a> </li>   
+        </ul>
+  <% else %>
     <button class="btn btn-primary dropdown-toggle" style="margin-top:7.15px" type="button" data-toggle="dropdown">Guest
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-    </ul>
-    <% end %>
+      <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href=<%=login_path%>><span class="glyphicon glyphicon-log-in outline"></span> Login</a></li>
+        </ul>
+  <% end %>
   </div>
 </div>
     </ul>
@@ -82,14 +80,14 @@
           <%= link_to "Sign Out", logout_path, class: "btn-button" %> 
             <div class="alert alert-success" style="margin-top:30px">
               <strong>Logged as </strong><%= " #{current_user.username}" %>
-                </div>               
+            </div>               
         <% else %>  
           <%= link_to "Get Started", login_path, class: 'btn-button' %>
             <div class="alert alert-info" style="margin-top:30px">
               <strong>Currently as </strong> Guest
-                </div>
-            <% end %>
-          </div>
+            </div>
+        <% end %>
       </div>
-    </div>     
+    </div>
+  </div>     
 </body>
