@@ -4,12 +4,15 @@
 <head>
   <title>Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Montserrat' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Montserrat' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <head>
-  <title>Bootstrap Case</title>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -20,11 +23,6 @@
 <nav class="navbar navbar-light bg-faded navbar-fixed-top gradient-background ">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
       <a class="navbar-brand " href="#">Alecks's Blog</a>
     </div>
   <ul class="nav nav-pills responsive-nav pull-xs-left">
@@ -41,9 +39,25 @@
   </ul>
 <div class="collapse navbar-collapse" id="myNavbar">
   <ul class="nav pull-right"?>
-    <ul class="nav navbar-nav navbar-right outline">
-        <li><a href="#"><span class="glyphicon glyphicon-user outline"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in outline"></span> Login</a></li>
+    <ul class="nav navbar-nav navbar-right outline">  
+  <div class="dropdown">
+  <% if logged_in? %>
+    <button class="btn btn-primary dropdown-toggle" style="margin-top:7.15px" type="button" data-toggle="dropdown"><%= " #{current_user.username}" %>
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#"></a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user outline">  LogOut</a></li>
+    </ul>
+    <% else %>
+    <button class="btn btn-primary dropdown-toggle" style="margin-top:7.15px" type="button" data-toggle="dropdown">Guest
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+    </ul>
+    <% end %>
+  </div>
+</div>
     </ul>
   </ul>
 </div>
@@ -65,11 +79,17 @@
         </div>
         <div class="card-footer" id="intro-image">
         <% if logged_in? %>          
-              <%= link_to "Sign Out", logout_path, class: 'btn-button' %>                
-            <% else %>  
-            <%= link_to "Get Started", login_path, class: 'btn-button' %>  
+          <%= link_to "Sign Out", logout_path, class: "btn-button" %> 
+            <div class="alert alert-success" style="margin-top:30px">
+              <strong>Logged as </strong><%= " #{current_user.username}" %>
+                </div>               
+        <% else %>  
+          <%= link_to "Get Started", login_path, class: 'btn-button' %>
+            <div class="alert alert-info" style="margin-top:30px">
+              <strong>Currently as </strong> Guest
+                </div>
             <% end %>
-            </div>
+          </div>
       </div>
     </div>     
 </body>

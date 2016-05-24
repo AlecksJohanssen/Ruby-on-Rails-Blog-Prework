@@ -26,10 +26,11 @@ border-color: #fff!important;
 }
 .outline
 {
-font:"Roboto";
-font-color:#fff;
-color: #fff;
-border-color: #fff;
+font-weight: 300;
+font-color:#036FFC;
+color: #036FFC;
+border-color: #036FFC;
+
 }
 /*Blog title color*/
 .blog_title {
@@ -88,6 +89,7 @@ border-color: #fff;
   margin: .375rem;
   background-color: transparent;
   border-radius: 4px;
+
 }
 html {
   font: 100%/1.5 "Roboto", Verdana, sans-serif;
