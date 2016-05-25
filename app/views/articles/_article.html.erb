@@ -6,12 +6,24 @@
         </h4>
          <p class="card-text"><%= @markdown.render(article.body).html_safe %>
          </p>
-          <a href="#" class="btn btn-primary">Button
-          </a>
           <div class="card-footer">
-            <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
-                <div class="card-footer">
-              <%= link_to "Delete", article_path(article), :method => :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-warning' %>
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+  <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left:50rem">
+      Settings
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" >
+      <a class="dropdown-item" href=<%=edit_article_path(article)%>>Edit</a>
+      <a class="dropdown-item" href=<%= article_path(article)%> data-confirm="Are you sure?" data-method="delete">Delete</a>
+    </div>
+    <p class="col-md-6 text-xs-left" style="margin-bottom:0px;">
+                        Tags:
+                        <% article.tags.each do |tag| %>
+                        <%= link_to tag.name, tag_path(tag), class:'label label-default' %>
+                        <% end %>
+                      </p> 
+                    </div>
+                </div>
             </div>
           </div>
         </div>
