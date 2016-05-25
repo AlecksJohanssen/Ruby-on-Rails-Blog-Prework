@@ -32,7 +32,7 @@ gem 'font-awesome-sass'
 gem "animate-rails"
 #Authenticate and Security
 gem "sorcery"
-
+gem 'rails_12factor', group: 'production'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
