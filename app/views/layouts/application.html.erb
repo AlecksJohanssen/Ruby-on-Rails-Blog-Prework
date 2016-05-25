@@ -48,28 +48,22 @@
         <li><a href=<%=users_path%>><span class="glyphicon glyphicon-user outline">  UserSettings</a> </li>   
           <li><a href=<%=logout_path%>><span class="glyphicon glyphicon-user outline">  Logout</a> </li>
         </ul>
-  <% else %>
-    <button class="btn btn-primary dropdown-toggle" style="margin-top:7.15px" type="button" data-toggle="dropdown">Guest
-      <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-        <li><a href=<%=new_user_path%>><span class="glyphicon glyphicon-user outline">  Register</a> </li> 
-          <li><a href=<%=login_path%>><span class="glyphicon glyphicon-log-in outline"></span> Login</a></li>
+    <% else %>
+      <button class="btn btn-primary dropdown-toggle" style="margin-top:7.15px" type="button" data-toggle="dropdown">Guest
+        <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+          <li><a href=<%=new_user_path%>><span class="glyphicon glyphicon-user outline">  Register</a> </li> 
+            <li><a href=<%=login_path%>><span class="glyphicon glyphicon-log-in outline"></span> Login</a></li>
         </ul>
-  <% end %>
+    <% end %>
   </span>
-  </div>
-</div>
-  </ul>
-  </ul>
-</div>
 </nav>
 <div class="container">
   <div class="row">
     <div class="col-md-8">
       <%= yield %>
     </div>     
-  <div class="col-md-4" >
-    <div class="wrap pull-left" style="padding-left:28rem">
+  <div class="col-md-4" id="sidebar">
       <div class="card content" id="intro-image" >
         <%= image_tag("mrharley.jpg", :alt => "Blog Image") %>
           <div class="card-block " style="padding-top:30px">

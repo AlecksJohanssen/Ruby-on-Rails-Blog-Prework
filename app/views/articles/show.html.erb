@@ -1,10 +1,6 @@
-                <style> #intro-image {display:none} </style>
-                               <div class="card" style="margin-top:250px">
-                    <% if logged_in? %>
-                <nav class="cd-stretchy-nav edit-content">
-        
-                <% end %>
-                <div class="card-block " style="margin-bottom:250px">
+
+                               <div class="card" style="margin-top:70px">
+                <div class="card-block ">
                     <h4 class="card-title"><%= @article.title %></h4>
                     
                     <p class="card-text"><%= @markdown.render(@article.body).html_safe %></p>

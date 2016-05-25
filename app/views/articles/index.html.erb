@@ -14,7 +14,7 @@
 	</div>
 <body>
 	<header class="blog_header middle">
-		<div class="wrap">
+		<div class="wrap" style="padding-right:40rem">
 			<span id="animationSandbox" style="display: block;">
 				<h1 class="blog_title mega blog">Welcome to my Blog</h1>
 				<span class="beta subhead ">Hi I'm Alecks Johanssen from CoderSchool</span>			
@@ -24,12 +24,7 @@
 </body>
 </body>
 </html>
-<% if logged_in? %>
-<style> #intro-image {display:none} </style>
 <%= render @articles %>
-<% else %> 
-<%= render @articles %>
-<% end %>
 <br>
 
 
