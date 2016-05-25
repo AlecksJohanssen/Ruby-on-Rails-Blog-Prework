@@ -20,6 +20,10 @@ border-color: #fff!important;
   font-color:#036FFC;
   font-weight: 200;
 }
+.box-row
+{
+  margin-right:30rem;
+}
 .box-align
 {
   vertical-align: middle

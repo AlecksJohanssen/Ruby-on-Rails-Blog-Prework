@@ -24,7 +24,12 @@
 </body>
 </body>
 </html>
+<% if logged_in? %>
+<style> #intro-image {display:none} </style>
 <%= render @articles %>
+<% else %> 
+<%= render @articles %>
+<% end %>
 <br>
 
 
