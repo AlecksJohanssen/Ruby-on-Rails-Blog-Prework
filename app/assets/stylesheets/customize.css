@@ -138,7 +138,7 @@ footer, header, hgroup, menu, nav, section, main {
     margin-top: 5px;}
 .card-block ul {
     list-style: inherit!important;
-    padding-left: 20px;
+    padding-left: 100px;
 }
 .container {font-family: 'Montserrat', sans-serif;}
 .card-title a {color:#34495e!important}
@@ -169,8 +169,4 @@ footer, header, hgroup, menu, nav, section, main {
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 0.25rem;
-}
-.card-block ul {
-    list-style: inherit!important;
-    padding-left: 20px;
 }

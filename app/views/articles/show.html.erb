@@ -18,9 +18,7 @@
                         <% @article.tags.each do |tag| %>
                         <%= link_to tag.name, tag_path(tag), class:'label label-default' %>
                         <% end %>
-                    </p>
-
-                           
+                    </p>            
                 </div>
             <div class="card">
             <div class="card-header"> Comments (<%= @article.comments.size %>)</div>
