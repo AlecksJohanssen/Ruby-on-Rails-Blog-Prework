@@ -1,32 +1,27 @@
-
-                               <div class="card" style="margin-top:70px">
-                <div class="card-block ">
-                    <h4 class="card-title"><%= @article.title %></h4>
-                    
-                    <p class="card-text"><%= @markdown.render(@article.body).html_safe %></p>
-                    
-                </div>
-                <div class="card-footer text-muted " style="height: 50px;overflow:hidden;">
-                    
-                        
-                    <p class="col-md-6 text-xs-left" style="margin-bottom:0px;">
-                        Tags:
-                        <% @article.tags.each do |tag| %>
+    <style> #intro-image {display:none} </style>
+    <div class="card" style="margin-top:70px">
+    <div class="card-block ">
+        <h4 class="card-title"><%= @article.title %></h4>                    
+            <p class="card-text"><%= @markdown.render(@article.body).html_safe %></p>                  
+    </div>
+        <div class="card-footer text-muted " style="height: 50px;overflow:hidden;">              
+            <p class="col-md-6 text-xs-left" style="margin-bottom:0px;">
+                Tags:
+                    <% @article.tags.each do |tag| %>
                         <%= link_to tag.name, tag_path(tag), class:'label label-default' %>
                         <% end %>
                     </p>            
                 </div>
-            <div class="card">
-            <div class="card-header"> Comments (<%= @article.comments.size %>)</div>
+    <div class="card">
+        <div class="card-header"> Comments (<%= @article.comments.size %>)</div>
             <div class="card-block">
-            
-            <div class="card-text">
-                <%= render partial: 'articles/comment', collection: @article.comments %>   
-                <%= render partial: 'comments/form' %>
-                
-            </div>    
+                <div class="card-text">
+                    <%= render partial: 'articles/comment', collection: @article.comments %>   
+                    <%= render partial: 'comments/form' %>   
+                </div>    
             </div>
-            </div>
+        </div>
+    </div>
             
       
         
