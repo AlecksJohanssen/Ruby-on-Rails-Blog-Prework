@@ -1,4 +1,5 @@
 .gradient-background{
+  /* Browser color */
 background-image: -o-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
 background-image: -moz-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
 background-image: -webkit-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
