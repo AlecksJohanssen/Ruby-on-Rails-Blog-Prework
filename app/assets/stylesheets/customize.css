@@ -16,6 +16,10 @@ border-color: #fff!important;
 .content {
   -webkit-animation: bounceInLeft 1s;
 }
+.user-avatar {
+    width: 80px!important;
+    border-radius: 5px;
+}
 .body_text{
   font:"Roboto";
   font-color:#036FFC;
