@@ -5,7 +5,7 @@ background-image: -moz-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
 background-image: -webkit-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
 background-image: -ms-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
 background-image: linear-gradient(to right, #51F7DB 0%, #036FFC 100%);
-}
+}/*Color Outline*/
 .btn-secondary-outline {
 color: #fff!important;
 border-color: #fff!important;
