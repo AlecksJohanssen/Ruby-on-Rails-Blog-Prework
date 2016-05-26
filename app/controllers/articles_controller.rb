@@ -6,12 +6,11 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    # Searching
     if params[:search]
       @articles = Article.search(params[:search])
     end
-
   end
-
   # GET /articles/1
   # GET /articles/1.json
   def show
