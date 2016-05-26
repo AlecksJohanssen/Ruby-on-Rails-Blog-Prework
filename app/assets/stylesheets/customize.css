@@ -7,8 +7,8 @@ background-image: -ms-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
 background-image: linear-gradient(to right, #51F7DB 0%, #036FFC 100%);
 }/*Color Outline*/
 .btn-secondary-outline {
-color: #fff!important;
-border-color: #fff!important;
+color: #fff;
+border-color: #fff;
 }
 .blog_header {
   -webkit-animation: bounceInUp 1s;
@@ -16,10 +16,7 @@ border-color: #fff!important;
 .content {
   -webkit-animation: bounceInLeft 1s;
 }
-.user-avatar {
-    width: 80px!important;
-    border-radius: 5px;
-}
+
 .body_text{
   font:"Roboto";
   font-color:#036FFC;
@@ -113,7 +110,7 @@ html {
   text-align: center;
 }
 .user-avatar {
-    width: 80px!important;
+    width: 80px;
     border-radius: 5px;
 }
 .comment {
@@ -144,12 +141,12 @@ footer, header, hgroup, menu, nav, section, main {
     color: #919191;
     margin-top: 5px;}
 .card-block ul {
-    list-style: inherit!important;
+    list-style: inherit;
     padding-left: 100px;
 }
 .container {font-family: 'Montserrat', sans-serif;}
-.card-title a {color:#34495e!important}
-.card-title a:hover {color:#2c3e50!important; text-decoration: none;}
+.card-title a {color:#34495e}
+.card-title a:hover {color:#2c3e50; text-decoration: none;}
 .comment-delete {
     opacity: 0;
     width: 80px;
