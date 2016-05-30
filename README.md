@@ -1,10 +1,5 @@
 # Pre-work - *Alecks's Blog*
 
-> HINT: Please
-> - include this README.md in your project and fill out the information. 
-> - remove the `README.rdoc` file that Rails generates. 
-> - remove all the HINT blocks in this file.
-
 **Ruby-Blog** is a Ruby on Rails blog application.
 
 Submitted by: **Dang Quang Minh** Also Known As **Alecks Johanssen**
@@ -36,11 +31,11 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [X] List anything else that you can get done to improve the app functionality!
-  [X] User can now login
-  [X] User can register online
-  [X] Title and button are automatically change color
-  [X] Added with Custom Animations
+ [X] List anything else that you can get done to improve the app functionality!
+* [X] User can now login
+* [X] User can register online
+* [X] Title and button are automatically change color
+* [X] Added with Custom Animations
 
 ## Video Walkthrough 
 
