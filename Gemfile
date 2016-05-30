@@ -33,6 +33,8 @@ gem "animate-rails"
 #Authenticate and Security
 gem "sorcery"
 gem 'rails_12factor', group: 'production'
+#CheckView
+gem 'impressionist'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
