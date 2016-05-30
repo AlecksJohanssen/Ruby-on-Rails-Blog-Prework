@@ -2,8 +2,8 @@
     <div class="card" style="margin-top:70px">
     <div class="card-block ">
     <span class="label label-info total-count">
-                        View Counts:<%=@article.impression_count %> 
-                        </span>
+        View Counts:<%=@article.impression_count %> 
+            </span>
         <h4 class="card-title"><%= @article.title %></h4>                    
             <p class="card-text"><%= @markdown.render(@article.body).html_safe %></p>                       
     </div>
