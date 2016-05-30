@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_filter :log_impression, :only=> [:show]
 
   # GET /articles
   # GET /articles.json
@@ -18,7 +19,11 @@ class ArticlesController < ApplicationController
     @comment = Comment.new
     @comment.article_id = @article.id
   end
-
+def log_impression
+  @article = Article.find(params[:id])
+  # this assumes you have a current_user method in your authentication system
+  @article.impressions.create(ip_address: request.remote_ip,user_id:current_user.id)
+end
   # GET /articles/new
   def new
     @article = Article.new

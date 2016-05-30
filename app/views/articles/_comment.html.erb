@@ -1,6 +1,7 @@
 <div class="row" style="margin-bottom:30px;">
     <div class="col-md-2">
             <%= image_tag("user_avatar.png", :alt => "Sidebar Image", class: 'user-avatar') %>
+            
                 <% if logged_in? %>
                     <%= button_to 'Delete', [@article, comment], method: :delete, data: { confirm: 'Are you sure?' },class:'comment-delete'  %>
                 <% end %>

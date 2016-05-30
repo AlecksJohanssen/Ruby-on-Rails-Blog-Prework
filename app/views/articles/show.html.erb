@@ -1,8 +1,11 @@
     <style> #intro-image {display:none} </style>
     <div class="card" style="margin-top:70px">
     <div class="card-block ">
+    <span class="label label-info total-count">
+                        View Counts:<%=@article.impression_count %> 
+                        </span>
         <h4 class="card-title"><%= @article.title %></h4>                    
-            <p class="card-text"><%= @markdown.render(@article.body).html_safe %></p>                  
+            <p class="card-text"><%= @markdown.render(@article.body).html_safe %></p>                       
     </div>
         <div class="card-footer text-muted " style="height: 50px;overflow:hidden;">              
             <p class="col-md-6 text-xs-left" style="margin-bottom:0px;">
