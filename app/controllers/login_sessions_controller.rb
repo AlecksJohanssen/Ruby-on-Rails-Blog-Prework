@@ -1,7 +1,6 @@
 class LoginSessionsController < ApplicationController  
     def new
   end
-  
   def create
     if login(params[:email], params[:password])
       redirect_back_or_to(articles_path)
