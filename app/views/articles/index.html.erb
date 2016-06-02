@@ -14,21 +14,37 @@
 			<span class="stretchy-nav-bg"></span>
 		</nav>
                 <% end %>
+                <div class="wrap"
+                <div class="card-block" >
 
-                <div class="card-block index-maxheight">
                     <h4 class="card-title"><%= link_to article.title, article %></h4>
+
                     <p class="card-text"><%= @markdown.render(article.body).html_safe %></p>
+<div class="btn-group pull-right"  role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" >
+      Settings
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" >
+      <a class="dropdown-item" href=<%=edit_article_path(article)%>>Edit</a>
+      <a class="dropdown-item" href=<%= article_path(article)%> data-confirm="Are you sure?" data-method="delete">Delete</a>  
+    </div>
                 </div>
+
                 <div class="card-footer text-muted " style="height: 50px;overflow:hidden;">
                     <p class="col-md-6 text-xs-left" style="margin-bottom:0px;">
                         Tags:
                         <% article.tags.each do |tag| %>
                         <%= link_to tag.name, tag_path(tag), class:'label label-default' %>
+
                         <% end %>
-                    </p>             
+                    </p>       
+
                 </div>
             </div>
+            </div>
+
             <% end %>
+
         
 
    
