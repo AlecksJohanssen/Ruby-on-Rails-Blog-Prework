@@ -6,9 +6,9 @@ background-image: -webkit-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
 background-image: -ms-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
 background-image: linear-gradient(to right, #51F7DB 0%, #036FFC 100%);
 }/*Color Outline*/
-.btn-secondary-outline {
+.btn-secondary-outline{
 color: #fff;
-border-color: #fff;
+border-color: #036FFC;
 }
 .blog_header {
   -webkit-animation: bounceInUp 1s;
