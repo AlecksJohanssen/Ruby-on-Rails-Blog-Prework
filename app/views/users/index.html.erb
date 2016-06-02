@@ -16,7 +16,6 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        
         <td><%= user.email %></td>
           <td><%= link_to raw('<i class="fa fa-external-link-square"></i>  Show'), user,class:'btn btn-sm btn-info-outline' %>
               <%= link_to raw('<i class="fa fa-pencil-square"></i>  Edit'), edit_user_path(user), class:'btn btn-sm btn-warning-outline' %>
