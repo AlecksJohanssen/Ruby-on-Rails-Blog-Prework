@@ -39,7 +39,6 @@ gem 'impressionist'
 gem 'rails-assets-tether'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
 # Use Unicorn as the app server
 # gem 'unicorn'
 
