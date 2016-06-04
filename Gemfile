@@ -35,7 +35,8 @@ gem "sorcery"
 gem 'rails_12factor', group: 'production'
 #CheckView
 gem 'impressionist'
-
+#FixBootstrap
+gem 'rails-assets-tether'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
