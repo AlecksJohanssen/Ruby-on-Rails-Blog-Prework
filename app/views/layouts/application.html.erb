@@ -22,8 +22,8 @@
 <body>
 <nav class="navbar navbar-light bg-faded navbar-fixed-top gradient-background ">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand " href=<%=articles_path%>>Alecks's Blog</a>
+    <div class="navbar-header navfontz">
+      <a class="navbar-brand " href=<%=articles_path%> style="font-color:#FFF">Alecks's Blog</a>
     </div>
   <ul class="nav nav-pills responsive-nav pull-xs-left">
     <li class="nav-item active" style="width:100%">
@@ -41,20 +41,20 @@
   <ul class="nav pull-right"?>
     <ul class="nav navbar-nav navbar-right outline">  
     <% if logged_in? %>
- <div class="dropdown" style="margin-top:7px">
+ <div class="dropdown dropbut" >
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><%= " #{current_user.username}" %>
     </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a href=<%=users_path%>><span class="glyphicon glyphicon-user outline">  UserSettings</a> </li>   
-          <li><a href=<%=logout_path%>><span class="glyphicon glyphicon-user outline">  Logout</a> </li>
+        <li><a href=<%=users_path%>><option style="font-family:'Montserrat'">UserSettings</option></a></li>   
+          <li><a href=<%=logout_path%>> <option style="font-family:'Montserrat'">LogOut</option> </li>
         </ul>
     <% else %>
- <div class="dropdown" style="margin-top:7px">
+ <div class="dropdown dropbut" >
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Guest
     </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><a href=<%=new_user_path%>><span class="glyphicon glyphicon-user outline">  Register</a> </li> 
-            <li><a href=<%=login_path%>><span class="glyphicon glyphicon-log-in outline">  Login</a></li>
+          <li><a href=<%=new_user_path%>><option style="font-family:'Montserrat'">Register</option></a> </li> 
+            <li><a href=<%=login_path%>><option style="font-family:'Montserrat'">LogIn</option></li>
         </ul>
       </span>
     <% end %>

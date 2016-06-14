@@ -7,8 +7,8 @@ background-image: -ms-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
 background-image: linear-gradient(to right, #51F7DB 0%, #036FFC 100%);
 }/*Color Outline*/
 .btn-secondary-outline{
-color: #fff;
-border-color: #036FFC;
+color: #fff!important;
+    border-color: #fff!important;
 }
 .blog_header {
   -webkit-animation: bounceInUp 1s;
@@ -78,6 +78,15 @@ border-color: #036FFC;
 .mega {
     font-size: 5.5rem;
     line-height: 1;
+  }
+.dropbut {
+    font-family: 'Montserrat', sans-serif;
+    margin-top:7px;
+  }
+  .navfontz {
+    font-family: 'Montserrat', sans-serif;
+    font-color: #FFF!important;
+    color: #FFF!important;
   }
 .subhead {
   	font:"Roboto";
