@@ -12,7 +12,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-<head>
+  <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -40,23 +40,24 @@
 <div class="collapse navbar-collapse" id="myNavbar">
   <ul class="nav pull-right"?>
     <ul class="nav navbar-nav navbar-right outline">  
-  <div class="dropdown">
-  <% if logged_in? %>
-    <button class="btn btn-primary dropdown-toggle" style="margin-top:7.15px" type="button" data-toggle="dropdown"><%= " #{current_user.username}" %>
-      <span class="caret"></span></button>
-        <ul class="dropdown-menu">
+    <% if logged_in? %>
+ <div class="dropdown" style="margin-top:7px">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><%= " #{current_user.username}" %>
+    </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
         <li><a href=<%=users_path%>><span class="glyphicon glyphicon-user outline">  UserSettings</a> </li>   
           <li><a href=<%=logout_path%>><span class="glyphicon glyphicon-user outline">  Logout</a> </li>
         </ul>
     <% else %>
-      <button class="btn btn-primary dropdown-toggle" style="margin-top:7.15px" type="button" data-toggle="dropdown">Guest
-        <span class="caret"></span></button>
-          <ul class="dropdown-menu">
+ <div class="dropdown" style="margin-top:7px">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Guest
+    </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
           <li><a href=<%=new_user_path%>><span class="glyphicon glyphicon-user outline">  Register</a> </li> 
-            <li><a href=<%=login_path%>><span class="glyphicon glyphicon-log-in outline"></span> Login</a></li>
+            <li><a href=<%=login_path%>><span class="glyphicon glyphicon-log-in outline">  Login</a></li>
         </ul>
+      </span>
     <% end %>
-  </span>
 </nav>
 <div class="container">
   <div class="row">
@@ -72,29 +73,29 @@
               </p>
           </div>
         </div>
-        <div class="card-footer" id="intro-image">
-        <% if logged_in? %>          
+  <div class="card-footer" id="intro-image">
+      <% if logged_in? %>          
           <%= link_to "Sign Out", logout_path, class: "btn-button" %> 
             <div class="alert alert-success" style="margin-top:30px">
               <strong>Logged as </strong><%= " #{current_user.username}" %>
             </div>               
-        <% else %>  
-          <%= link_to "Get Started", login_path, class: 'btn-button' %>
-            <div class="alert alert-info" style="margin-top:30px">
-              <strong>Currently as </strong> Guest
+      <% else %>  
+        <%= link_to "Get Started", login_path, class: 'btn-button' %>
+          <div class="alert alert-info" style="margin-top:30px">
+            <strong>Currently as </strong> Guest
             </div>
           <% end %>
-        </div>
-          <% if logged_in? %>
-            <div class="card">
-              <div class="card-block">
-                <%= link_to 'New Article', new_article_path, class: 'btn btn-info' %>  
+      </div>
+        <% if logged_in? %>
+          <div class="card">
+            <div class="card-block">
+              <%= link_to 'New Article', new_article_path, class: 'btn btn-info' %>  
             </div>
           </div>
-            <% end %>           
-            <div class="alert alert-success" role="alert" id="success-alert">
-                  <p id="notice"><%= notice %></p>
-                </div>
+      <% end %>           
+        <div class="alert alert-success" role="alert" id="success-alert">
+            <p id="notice"><%= notice %></p>
+              </div>
               </div>
             </div>
         </div>
