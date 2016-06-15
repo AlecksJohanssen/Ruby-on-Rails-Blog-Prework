@@ -38,7 +38,6 @@ font-weight: 300;
 font-color:#036FFC;
 color: #036FFC;
 border-color: #036FFC;
-
 }
 /*Blog title color*/
 .blog_title {
@@ -60,10 +59,13 @@ border-color: #036FFC;
 }
 .middle {
   padding: 1.5rem;
+  text-align: center;
 }
 .wrap {
   max-width: 90rem;
   margin: 0 auto;
+    max-height: 270px;
+    overflow: hidden;
 }
 .blog{
 	font:"Roboto";
@@ -97,7 +99,7 @@ border-color: #036FFC;
   border: 2px solid #036FFC;
   line-height: 1.375;
   padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-right: 50rem;
   font-weight: 700;
   color: #036FFC;
   cursor: pointer;
@@ -106,18 +108,8 @@ border-color: #036FFC;
   margin: .375rem;
   background-color: transparent;
   border-radius: 4px;
+}
 
-}
-html {
-  font: 100%/1.5 "Roboto", Verdana, sans-serif;
-  color: #3d464d;
-  background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-  width: 100%;
-  padding-top: 3rem;
-  overflow: hidden-x;
-  text-align: center;
-}
 .user-avatar {
     width: 80px;
     border-radius: 5px;
@@ -153,9 +145,16 @@ footer, header, hgroup, menu, nav, section, main {
     list-style: inherit;
     padding-left: 100px;
 }
-.container {font-family: 'Montserrat', sans-serif;}
-.card-title a {color:#34495e}
-.card-title a:hover {color:#2c3e50; text-decoration: none;}
+.container {
+  font-family: 'Montserrat', sans-serif;
+}
+.card-title a {
+  color:#34495e;
+padding-left: 2.15rem;
+}
+.card-title a:hover {
+  color:#2c3e50; text-decoration: none;
+}
 .comment-delete {
     opacity: 0;
     width: 80px;
@@ -183,3 +182,16 @@ footer, header, hgroup, menu, nav, section, main {
     vertical-align: baseline;
     border-radius: 0.25rem;
 }
+.text-move{
+  position: relative;
+    left: -100px;
+}
+p{
+  padding-left: 2.15rem;
+}
+.card-block ul {
+    list-style: inherit!important;
+    padding-left: 20px;
+}
+
+

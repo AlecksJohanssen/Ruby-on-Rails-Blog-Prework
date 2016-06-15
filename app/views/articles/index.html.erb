@@ -15,11 +15,9 @@
 		</nav>
                 <% end %>
                 <div class="wrap"
-                <div class="card-block" >
-
+                <div class="card-block">
                     <h4 class="card-title"><%= link_to article.title, article %></h4>
-
-                    <p class="card-text"><%= @markdown.render(article.body).html_safe %></p>
+                    <p class="card-text" style="text-align:left"><%= @markdown.render(article.body).html_safe %></p>
 <div class="btn-group pull-right" role="group">
     <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" >
       Settings
