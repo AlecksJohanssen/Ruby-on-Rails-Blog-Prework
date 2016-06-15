@@ -6,13 +6,20 @@
 	</header>
             <% @articles.each do |article| %>
             <div class="card animated bounceInUp">
-                <% if logged_in? %>
-                <nav class="cd-stretchy-nav edit-content">
-			<a class="cd-nav-trigger" href="">
-			</a>
+                <% if logged_in? %>  <nav class="cd-stretchy-nav add-content">
+    <a class="cd-nav-trigger" href="#0"> 
+                <span aria-hidden="true"></span>
+            </a>
+    <ul>
+      <li><a href="#0"><span>Image</span></a></li>
+      <li><a href="#0"><span>Audio</span></a></li>
+      <li><a href="#0"><span>Link</span></a></li>
+      <li><a href="#0"><span>Video</span></a></li>
+    </ul>
 
-			<span class="stretchy-nav-bg"></span>
-		</nav>
+    <span class="stretchy-nav-bg"></span>
+  </nav>
+
                 <% end %>
                 <div class="wrap"
                 <div class="card-block">

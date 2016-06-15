@@ -25,6 +25,8 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'redcarpet'
 #Add FontAwesome
 gem 'font-awesome-sass'
+#Font Awesome
+gem "font-awesome-rails"
 #Implement Animation
 gem "animate-rails"
 #Authenticate and Security
