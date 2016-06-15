@@ -1,39 +1,27 @@
-            <header class="blog_header middle" id="intro">
-			<span id="animationSandbox" style="display: block;">
-				<h1 class="blog_title mega blog">Welcome to my Blog</h1>
-				<span class="beta subhead ">Hi I'm Alecks Johanssen from CoderSchool</span>			
-			</span>
-	</header>
+<header class="blog_header middle" id="intro">
+    <span id="animationSandbox" style="display: block;">
+		<h1 class="blog_title mega blog">Welcome to my Blog</h1>
+			<span class="beta subhead ">Hi I'm Alecks Johanssen from CoderSchool </span> 
+	</span>
+</header>
             <% @articles.each do |article| %>
-            <div class="card animated bounceInUp">
-                <% if logged_in? %>  <nav class="cd-stretchy-nav add-content">
-    <a class="cd-nav-trigger" href="#0"> 
-                <span aria-hidden="true"></span>
+    <div class="card animated bounceInUp">
+            <% if logged_in? %>  
+<nav class="cd-stretchy-nav edit-content">
+            <a class="cd-nav-trigger" href="">
             </a>
-    <ul>
-      <li><a href="#0"><span>Image</span></a></li>
-      <li><a href="#0"><span>Audio</span></a></li>
-      <li><a href="#0"><span>Link</span></a></li>
-      <li><a href="#0"><span>Video</span></a></li>
-    </ul>
-
-    <span class="stretchy-nav-bg"></span>
-  </nav>
-
+            <ul>
+                <li><%= link_to raw("<i class=\"fa fa-pencil\"></i>"), edit_article_path(article),'data-toggle' => "tooltip", 'data-placement' => "left", 'title' => "Edit Article" %></li>
+                <li> <%= link_to raw("<i class=\"fa fa-trash\"></i>") , article, method: :delete, data: { confirm: 'Are you sure?' }, :form => { :id => "button-delete" },'data-toggle' => "tooltip", 'data-placement' => "left", 'title' => "Delete Article" %></li>
+            </ul>
+            <span aria-hidden="true" class="stretchy-nav-bg"></span>
+        </nav>
                 <% end %>
                 <div class="wrap"
                 <div class="card-block">
                     <h4 class="card-title"><%= link_to article.title, article %></h4>
                     <p class="card-text" style="text-align:left"><%= @markdown.render(article.body).html_safe %></p>
-<div class="btn-group pull-right" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" >
-      Settings
-    </button>
-    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" >
-      <a class="dropdown-item" href=<%=edit_article_path(article)%>>Edit</a>
-      <a class="dropdown-item" href=<%= article_path(article)%> data-confirm="Are you sure?" data-method="delete">Delete</a>  
-    </div>
-                </div>
+
                 <div class="card-footer text-muted " style="height: 50px;overflow:hidden;">
                     <p class="col-md-6 text-xs-left" style="margin-bottom:0px;">
                         Tags:
