@@ -4,6 +4,8 @@ class Article < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :taggings, dependent: :destroy
   has_many :impressions, :as=>:impressionable
+  validates_presence_of :title
+  validates_presence_of :body
   def impression_count
     impressions.size
   end

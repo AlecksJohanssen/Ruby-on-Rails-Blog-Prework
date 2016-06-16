@@ -1,7 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_filter :log_impression, :only=> [:show]
-
   # GET /articles
   # GET /articles.json
   def index
