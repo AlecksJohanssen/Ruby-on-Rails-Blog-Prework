@@ -89,6 +89,9 @@ border-color: #036FFC;
 	font-weight: 300;
 	padding-top: 1.5rem;
 }
+.total-count{
+  margin-left: 315px;
+}
 .bar-left
 {
   left:100px;
