@@ -1,10 +1,21 @@
 .gradient-background{
-  /* Browser color */
-background-image: -o-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
-background-image: -moz-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
-background-image: -webkit-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
-background-image: -ms-linear-gradient(right, #51F7DB 0%, #036FFC 100%);
-background-image: linear-gradient(to right, #51F7DB 0%, #036FFC 100%);
+ /* IE10+ */ 
+background-image: -ms-radial-gradient(right bottom, ellipse farthest-corner, #0DFFF7 0%, #3366FF 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-radial-gradient(right bottom, ellipse farthest-corner, #0DFFF7 0%, #3366FF 100%);
+
+/* Opera */ 
+background-image: -o-radial-gradient(right bottom, ellipse farthest-corner, #0DFFF7 0%, #3366FF 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(radial, right bottom, 0, right bottom, 572, color-stop(0, #0DFFF7), color-stop(100, #3366FF));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-radial-gradient(right bottom, ellipse farthest-corner, #0DFFF7 0%, #3366FF 100%);
+
+/* W3C Markup */ 
+background-image: radial-gradient(ellipse farthest-corner at right bottom, #0DFFF7 0%, #3366FF 100%);
 }/*Color Outline*/
 .btn-secondary-outline{
 color: #fff!important;
@@ -16,7 +27,12 @@ color: #fff!important;
 .content {
   -webkit-animation: bounceInLeft 1s;
 }
-
+.btn-success{
+  margin-top:10px;
+}
+.btn-warning{
+  margin-top:10px;
+}
 .body_text{
   font:"Roboto";
   font-color:#036FFC;
@@ -42,11 +58,11 @@ border-color: #036FFC;
 /*Blog title color*/
 .blog_title {
     color: #f35626;
-    background-image: -webkit-linear-gradient(360deg,#51F7DB,#036FFC);
+    background-image: -webkit-linear-gradient(360deg,#3366FF,#0DFFF7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-animation: hue 60s infinite linear;
-}
+  }
 /* Change Color Animation */
 @-webkit-keyframes hue {
   from {

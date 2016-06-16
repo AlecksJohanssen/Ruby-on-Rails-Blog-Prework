@@ -76,13 +76,13 @@
         </div>
   <div class="card-footer text-muted text-xs-center" id="intro-image">
       <% if logged_in? %>          
-          <%= link_to "Sign Out", logout_path, class: "btn-button" %> 
-            <div class="alert alert-success" style="margin-top:30px">
-              <strong>Logged as </strong><%= " #{current_user.username}" %>
+          <%= link_to "Sign Out", logout_path, class: "btn btn-success" %> 
+            <div class="alert alert-success" style="margin-top:13px">
+              <strong>Logged as </strong><%= "#{current_user.username}" %>
             </div>               
       <% else %>  
-        <%= link_to "Get Started", login_path, class: 'btn-button' %>
-          <div class="alert alert-info" style="margin-top:30px">
+        <%= link_to "Get Started", login_path, class: 'btn btn-warning' %>
+          <div class="alert alert-info" style="margin-top:20px">
             <strong>Currently as </strong> Guest
             </div>
           <% end %>
@@ -94,16 +94,10 @@
             </div>
       <% end %>           
         <div class="alert alert-success" role="alert" id="success-alert">
-            <p id="notice"><%= notice %></p>
+            <p id="notice" style="margin-left:9.5rem"><%= notice %></p>
             </div>
               </div>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div> 
-  </div>    
-</div>
+            
 <script>
   jQuery(document).ready(function() {
   if ($('.cd-stretchy-nav').length > 0) {
