@@ -21,10 +21,11 @@
 </head>
 <body>
 <nav class="navbar navbar-light bg-faded navbar-fixed-top gradient-background ">
-  <div class="container-fluid">
-    <div class="navbar-header navfontz">
-      <a class="navbar-brand " href=<%=articles_path%> style="font-color:#FFF">Alecks's Blog</a>
-    </div>
+  <div class="container-fluid pull-left">
+    <button class="c-hamburger c-hamburger--htx">
+  <span>toggle menu</span>
+</button>
+</div>
   <ul class="nav nav-pills responsive-nav pull-xs-left">
     <li class="nav-item active" style="width:100%">
       <%= form_tag(articles_path, :method => "get", class: "navbar-form form-inline", id: "search-form") do %>
@@ -118,6 +119,26 @@
   }
 });
 </script>
+<script>
+(function() {
 
+  "use strict";
+
+  var toggles = document.querySelectorAll(".c-hamburger");
+
+  for (var i = toggles.length - 1; i >= 0; i--) {
+    var toggle = toggles[i];
+    toggleHandler(toggle);
+  };
+
+  function toggleHandler(toggle) {
+    toggle.addEventListener( "click", function(e) {
+      e.preventDefault();
+      (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+    });
+  }
+
+})();
+</script>
 
 </body>

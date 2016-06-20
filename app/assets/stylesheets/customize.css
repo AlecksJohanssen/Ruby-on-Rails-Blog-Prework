@@ -30,6 +30,9 @@ color: #fff!important;
 .btn-success{
   margin-top:10px;
 }
+.btn-default{
+  margin-right: 50px;
+}
 .btn-warning{
   margin-top:10px;
 }
@@ -846,9 +849,8 @@ keyframes
     transform: translateX(0);
   }
 }
-
-
 .cd-stretchy-nav i {
     margin-right: 9px;
     font-size: 15px;
 }
+@import "hamburger";
