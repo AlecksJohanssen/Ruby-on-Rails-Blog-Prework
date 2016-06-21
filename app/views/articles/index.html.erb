@@ -17,7 +17,15 @@
             <span aria-hidden="true" class="stretchy-nav-bg"></span>
         </nav>
                 <% end %>
-                <div class="wrap"
+                <div class="wrap">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title"><%= link_to article.title, article %></h3>
+        </div>
+    <div class="panel-body">
+         <p class="card-text" style="text-align:left"><%= @markdown.render(article.body).html_safe %></p>
+    </div>
+</div>
                 <div class="card-block">
                     <h4 class="card-title"><%= link_to article.title, article %></h4>
                     <p class="card-text" style="text-align:left"><%= @markdown.render(article.body).html_safe %></p>
