@@ -1,7 +1,16 @@
 // Custom bootstrap variables must be set or imported before bootstrap itself.
+@import "bootstrap-sprockets";
+
+
 @import "bootstrap";
+
+
+// Whatever application styles you have go last
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "customize";
 @import "animation.css";
 @import "button.css";
+
+

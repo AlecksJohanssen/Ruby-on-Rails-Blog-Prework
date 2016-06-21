@@ -4,7 +4,7 @@ gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '>= 3.2'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -20,7 +20,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 #Run Bootstrap
-gem 'bootstrap', '~> 4.0.0.alpha3'
 #Build RedCarpet
 gem 'redcarpet'
 #Add FontAwesome
@@ -36,6 +35,13 @@ gem 'rails_12factor', group: 'production'
 gem 'impressionist'
 #FixBootstrap
 gem 'rails-assets-tether'
+#NewBS
+gem 'bootstrap-sass', '~> 3.3.6'
+# twitter bootstrap css & javascript toolkit
+gem 'twitter-bootswatch-rails', '~> 3.3.4'
+gem 'therubyracer'
+# twitter bootstrap helpers gem, e.g., alerts etc...
+gem 'twitter-bootswatch-rails-helpers'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server

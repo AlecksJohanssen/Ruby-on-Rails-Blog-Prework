@@ -1,26 +1,13 @@
-.gradient-background{
- /* IE10+ */ 
-background-image: -ms-radial-gradient(right bottom, ellipse farthest-corner, #0DFFF7 0%, #3366FF 100%);
 
-/* Mozilla Firefox */ 
-background-image: -moz-radial-gradient(right bottom, ellipse farthest-corner, #0DFFF7 0%, #3366FF 100%);
-
-/* Opera */ 
-background-image: -o-radial-gradient(right bottom, ellipse farthest-corner, #0DFFF7 0%, #3366FF 100%);
-
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(radial, right bottom, 0, right bottom, 572, color-stop(0, #0DFFF7), color-stop(100, #3366FF));
-
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-radial-gradient(right bottom, ellipse farthest-corner, #0DFFF7 0%, #3366FF 100%);
-
-/* W3C Markup */ 
-background-image: radial-gradient(ellipse farthest-corner at right bottom, #0DFFF7 0%, #3366FF 100%);
 }/*Color Outline*/
 .btn-secondary-outline{
 color: #fff!important;
     border-color: #fff!important;
 }
+
+.form-control {
+  margin-left: 200px;
+  }
 .blog_header {
   -webkit-animation: bounceInUp 1s;
 }
@@ -30,17 +17,10 @@ color: #fff!important;
 .btn-success{
   margin-top:10px;
 }
-.btn-default{
-  margin-right: 50px;
-}
 .btn-warning{
   margin-top:10px;
 }
-.body_text{
-  font:"Roboto";
-  font-color:#036FFC;
-  font-weight: 200;
-}
+
 .box-row
 {
   margin-right:30rem;
@@ -51,13 +31,7 @@ color: #fff!important;
 {
   vertical-align: middle
 }
-.outline
-{
-font-weight: 300;
-font-color:#036FFC;
-color: #036FFC;
-border-color: #036FFC;
-}
+
 /*Blog title color*/
 .blog_title {
     color: #f35626;
@@ -85,6 +59,7 @@ border-color: #036FFC;
   margin: 0 auto;
     max-height: 270px;
     overflow: hidden;
+    border-color: #FFF;
 }
 .blog{
 	font:"Roboto";
@@ -170,7 +145,7 @@ footer, header, hgroup, menu, nav, section, main {
   font-family: 'Montserrat', sans-serif;
 }
 .card-title a {
-  color:#34495e;
+  color:#009871;
 padding-left: 2.15rem;
 }
 .card-title a:hover {
@@ -210,26 +185,16 @@ padding-left: 2.15rem;
 p{
   padding-left: 2.15rem;
 }
-.card-block ul {
-    list-style: inherit!important;
-    padding-left: 20px;
-}
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
-
+.card-title{
+  font-color: #FFF;
+}
 html {
   font-size: 62.5%;
 }
-
-body {
-  font-size: 1.6rem;
-  font-family: "Source Sans Pro", sans-serif;
-  color: #003c5d;
-  background-color: #ffffff;
-  background-color: #003c5d;
-}
-
 a {
   color: #9acd91;
   text-decoration: none;
@@ -247,13 +212,6 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  font-size: 1.6rem;
-  font-family: "Source Sans Pro", sans-serif;
-  color: #003c5d;
-  background-color: #ffffff;
-  background-color: #003c5d;
-}
 
 a {
   color: #9acd91;
@@ -849,8 +807,9 @@ keyframes
     transform: translateX(0);
   }
 }
+
+
 .cd-stretchy-nav i {
     margin-right: 9px;
     font-size: 15px;
 }
-@import "hamburger";
