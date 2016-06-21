@@ -26,20 +26,20 @@
          <p class="card-text" style="text-align:left"><%= @markdown.render(article.body).html_safe %></p>
     </div>
 </div>
-                <div class="card-block">
-                    <h4 class="card-title"><%= link_to article.title, article %></h4>
-                    <p class="card-text" style="text-align:left"><%= @markdown.render(article.body).html_safe %></p>
-
-                <div class="card-footer text-muted " style="height: 50px;overflow:hidden;">
-                    <p class="col-md-6 text-xs-left" style="margin-bottom:0px;">
+            <div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Tags</h3>
+  </div>
+  <div class="panel-body">
+    <p class="col-md-6 text-xs-left" style="margin-bottom:0px;">
                         Tags:
                         <% article.tags.each do |tag| %>
                         <%= link_to tag.name, tag_path(tag), class:'label label-default' %>
 
                         <% end %>
                     </p>       
-
-                </div>
+  </div>
+</div>
             </div>
             </div>
             <% end %>

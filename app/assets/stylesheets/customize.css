@@ -58,6 +58,7 @@ color: #fff!important;
   margin: 0 auto;
     max-height: 270px;
     overflow: hidden;
+    border-color: #FFF;
 }
 .blog{
 	font:"Roboto";
