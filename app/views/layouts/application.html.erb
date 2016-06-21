@@ -27,7 +27,7 @@
     <ul class="nav navbar-nav navbar-right outline">  
     <% if logged_in? %>
  <div class="dropdown dropbut" >
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><%= " #{current_user.username}" %>
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><%= "#{current_user.username}" %>
     </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
         <li><a href=<%=users_path%>><option style="font-family:'Montserrat'">UserSettings</option></a></li>   
