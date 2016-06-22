@@ -84,7 +84,10 @@
               <i class="fa fa-assistive-listening-systems" aria-hidden="true"></i>
             </div>
           </div>
-  <div class="card-footer text-muted text-xs-center" id="card-show">
+
+          <div class="panel panel-default">
+  <div class="panel-body">
+     <div class="card-footer text-muted text-xs-center" id="card-show">
       <% if logged_in? %>
           <%= link_to "Sign Out", logout_path, class: "btn btn-success" %> 
             <div class="alert alert-success" style="margin-top:13px">
@@ -105,6 +108,10 @@
             <p id="notice"><%= notice %></p>
             </div>
              <% end %>  
+  </div>
+</div>
+
+ 
             
 <script>
   jQuery(document).ready(function() {

@@ -16,12 +16,14 @@ color: #fff!important;
 .fa-check-square-o{
   margin-right:5px;
 }
+.fa-cogs{
+  margin-right:5px;
+}
 .panel-danger{
   margin-right:220px;
 }
 .btn-info{
   margin-left:120px;
-  margin-top: 7px;
 }
 .fa-pencil-square-o{
   margin-right:5px;
@@ -544,7 +546,7 @@ edit content
 
 .cd-stretchy-nav.edit-content {
   position: absolute;
-  top: 15px;
+  top: 5px;
   right: 15px;
 }
 .cd-stretchy-nav.edit-content .stretchy-nav-bg {
@@ -566,6 +568,7 @@ edit content
 .cd-stretchy-nav.edit-content .cd-nav-trigger {
   height: 30px;
   width: 30px;
+ 
 }
 .cd-stretchy-nav.edit-content .cd-nav-trigger span {
   opacity: 0;
