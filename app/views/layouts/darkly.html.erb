@@ -46,7 +46,7 @@
   </ul>
 </div>
  <% else %>
- <ul class="navbar-right">
+ <ul class="navbar-right">`
         <div class="btn-group" style="margin-top: 7px">
   <a href="#" class="btn btn-info">Guest</a>
   <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></a>
@@ -68,21 +68,21 @@
       <%= yield %>
     </div>    
   <div class="col-md-4" id="sidebar">
-  <div class="panel panel-default">
+  <div class="panel panel-default" id="intro-image">
   <div class="panel-body">
-    <div class="card content" id="intro-image" >
+    <div class="card content"  >
         <%= image_tag("mrharley.jpg", :alt => "Blog Image") %>
         </div>
   </div>
 </div>
-        <div class="panel panel-default" style="margin-top:10px">
-          <div class="panel-heading"><h4 class="card-title ">Alecks Johanssen's Blog</h4></div>
+        <div class="panel panel-default" id="intro-image" style="margin-top:10px">
+          <div class="panel-heading"><h4 class="card-title">Alecks Johanssen's Blog</h4>\</div>
             <div class="panel-body">
             <p class="card-text body_text" style="text-align: justify;">Hello CoderSchool, thank you for taking time to read this blog. I'm Alecks Johanssen and next to me is the the most awesomeness teacher I have ever met :P, I'm proudly to introduce to you my very first Ruby on Rails Application. To get started please click the Button below!.
               </p>
             </div>
-          </div
-  <div class="card-footer text-muted text-xs-center" id="intro-image" ">
+          </div>
+  <div class="card-footer text-muted text-xs-center" id="card-show">
       <% if logged_in? %>          
           <%= link_to "Sign Out", logout_path, class: "btn btn-success" %> 
             <div class="alert alert-success" style="margin-top:13px">
@@ -93,15 +93,15 @@
           <div class="alert alert-info" style="margin-top:20px">
             <strong>Currently as </strong> Guest
             </div>
+
           <% end %>
         <% if logged_in? %>
-          <div class="card-footer text-muted text-xs-center" id="card-show">
             <div class="card-block">
               <%= link_to 'New Article', new_article_path, class: 'btn btn-info' %>  
             </div>       
+            <% else %>
         <div class="alert alert-success" role="alert" id="success-alert" style="margin-top:10px">
             <p id="notice" style="margin-left:9.5rem"><%= notice %></p>
-            </div>
             </div>
              <% end %>  
             

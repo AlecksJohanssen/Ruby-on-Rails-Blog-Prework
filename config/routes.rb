@@ -26,8 +26,8 @@ Rails.application.routes.draw do
     
     resources :login_sessions, only: [ :new, :create, :destroy ]
 
-get 'login'  => 'login_sessions#new'
-get 'logout' => 'login_sessions#destroy'
+get 'login'  => 'login_sessions#new', :as => :login
+get 'logout' => 'login_sessions#destroy', :as => :logout
     
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

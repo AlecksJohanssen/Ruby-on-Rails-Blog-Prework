@@ -1,41 +1,27 @@
-
-<nav class="navbar navbar-light bg-faded navbar-fixed-top gradient-background ">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-     <a class="navbar-brand " href=<%=articles_path%>>Alecks's Blog</a>
-    </div>
-<div class="collapse navbar-collapse" id="myNavbar">
-  <ul class="nav pull-right"?>
-    <ul class="nav navbar-nav navbar-right outline">
-    </ul>
-  </ul>
-</div>
-</nav>
-<div class="card" style="margin-top:160px" >
-  <div class="card-header text-xs-center"> Sign In</div>
-    <div class="card-block" >
-    <% if !logged_in? %>
-      <%= form_tag login_sessions_path,class:'', method: :post do %>
-        <div class="field form-group">
-          <%= label_tag :email %>
-            <%= text_field_tag :email, "", class: 'form-control' %>
-          </div>
-        <div class="field form-group">
-      <%= label_tag :password %>
-    <%= password_field_tag :password, "", class: 'form-control' %>
+<style> #intro-image {display:none} </style>
+ <style> #card-show {display:none} </style> 
+ <div class="login-panel pull-right">
+ <div class="panel panel-default" style="padding-right:80px">
+  <div class="panel-body">
+    <fieldset>
+  <legend>LogIn</legend> 
+ <div class="form-group"> 
+  <%= form_tag login_sessions_path,class:'', method: :post do %>
+ <label for="inputEmail" class="col-lg-2 control-label">Email</label> 
+ <div class="col-lg-10"> <%= text_field_tag :email, "", class: 'form-control' %> 
+ </div> 
+ </div> 
+ <div class="form-group"> 
+ <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+  <div class="col-lg-10"> <%= password_field_tag :password, "", class: 'form-control'%>
+   </div> 
+   </div> 
+  <button type="reset" class="btn btn-default">Cancel</button> 
+  <button type="submit" class="btn btn-primary" >Submit</button>
+   </fieldset> 
+   </div> 
+   </div>
   </div>
-<div class="actions form-group text-xs-center">
-  <%= submit_tag "Login", :class => 'btn-button' %>
 </div>
-  <% end %>
-    <% else %> 
-      <center><%= link_to "Sign Out", logout_path, class: 'btn-button' %></center> 
-  <% end %> 
-</div>
-</div>
+<%end%>
 

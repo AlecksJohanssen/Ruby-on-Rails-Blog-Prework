@@ -3,22 +3,41 @@
 color: #fff!important;
     border-color: #fff!important;
 }
-
+.login-panel{
+  margin-top: 60px;
+  
+}
 .form-control {
   margin-left: 200px;
   }
 .blog_header {
   -webkit-animation: bounceInUp 1s;
 }
+.btn-info{
+  margin-left:120px;
+}
 .content {
   -webkit-animation: bounceInLeft 1s;
 }
+.alert-success
+{
+  text-align: center;
+}
 .btn-success{
   margin-top:10px;
+  margin-left:120px;
 }
 .btn-warning{
   margin-top:10px;
   margin-left:120px;
+}
+
+.col-lg-10{
+  margin-bottom: 25px;
+  padding-right:  75px;
+}
+.form-group{
+  margin-right: 50px;
 }
 .alert-info{
   text-align: center;
