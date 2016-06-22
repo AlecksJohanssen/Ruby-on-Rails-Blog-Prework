@@ -25,6 +25,10 @@ color: #fff!important;
 .btn-info{
   margin-left:120px;
 }
+.comment{
+  color:#000;
+  background: #FFF!important;
+}
 .fa-pencil-square-o{
   margin-right:5px;
 }
