@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<%= javascript_include_tag "application" %>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -46,7 +47,7 @@
   </ul>
 </div>
  <% else %>
- <ul class="navbar-right">`
+ <ul class="navbar-right">
         <div class="btn-group" style="margin-top: 7px">
   <a href="#" class="btn btn-info">Guest</a>
   <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></a>
@@ -76,14 +77,14 @@
   </div>
 </div>
         <div class="panel panel-default" id="intro-image" style="margin-top:10px">
-          <div class="panel-heading"><h4 class="card-title">Alecks Johanssen's Blog</h4>\</div>
+          <div class="panel-heading"><h4 class="card-title">Alecks Johanssen's Blog</h4></div>
             <div class="panel-body">
             <p class="card-text body_text" style="text-align: justify;">Hello CoderSchool, thank you for taking time to read this blog. I'm Alecks Johanssen and next to me is the the most awesomeness teacher I have ever met :P, I'm proudly to introduce to you my very first Ruby on Rails Application. To get started please click the Button below!.
               </p>
             </div>
           </div>
   <div class="card-footer text-muted text-xs-center" id="card-show">
-      <% if logged_in? %>          
+      <% if logged_in? %>
           <%= link_to "Sign Out", logout_path, class: "btn btn-success" %> 
             <div class="alert alert-success" style="margin-top:13px">
               <strong>Logged as </strong><%= "#{current_user.username}" %>
@@ -93,7 +94,6 @@
           <div class="alert alert-info" style="margin-top:20px">
             <strong>Currently as </strong> Guest
             </div>
-
           <% end %>
         <% if logged_in? %>
             <div class="card-block">
@@ -101,7 +101,7 @@
             </div>       
             <% else %>
         <div class="alert alert-success" role="alert" id="success-alert" style="margin-top:10px">
-            <p id="notice" style="margin-left:9.5rem"><%= notice %></p>
+            <p id="notice"><%= notice %></p>
             </div>
              <% end %>  
             
