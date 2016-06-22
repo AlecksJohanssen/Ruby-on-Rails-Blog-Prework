@@ -1,13 +1,15 @@
     <style> #intro-image {display:none} </style>
     <style> #card-show {display:none} </style>
-    <div class="card" style="margin-top:70px">
-    <div class="card-block">
+    <div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Article</h3>
+  </div>
+  <div class="panel-body">
     <span class="label label-info total-count">
         View Counts:<%=@article.impression_count %> 
             </span>
         <h4 class="card-title" style="margin-left:10px"><%= @article.title %></h4>                    
             <p class="card-text"><%= @markdown.render(@article.body).html_safe %></p>                       
-    </div>
     </div>
         <div class="card-footer text-muted " style="height: 50px;overflow:hidden;">              
             <p class="col-md-6 text-xs-left" style="margin-bottom:0px;">
@@ -17,14 +19,25 @@
                         <% end %>
                     </p>            
                 </div>
-    <div class="card">
-        <div class="card-header"> Comments (<%= @article.comments.size %>)</div>
-            <div class="card-block">
+  </div>
+</div>
+</div>
+    <div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel danger</h3>
+  </div>
+  <div class="comment-panel">
+  <div class="panel-body">
+    <div class="card-header"> Comments (<%= @article.comments.size %>)</div>
+            <div class="card-block" style="padding-right:200px">
                 <div class="card-text">
                     <%= render partial: 'articles/comment', collection: @article.comments %>   
                     <%= render partial: 'comments/form' %>   
                 </div>    
             </div>
         </div>
-    </div>
+  </div>
+</div>
+
+
             

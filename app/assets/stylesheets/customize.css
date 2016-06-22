@@ -13,9 +13,18 @@ color: #fff!important;
 .blog_header {
   -webkit-animation: bounceInUp 1s;
 }
+.fa-check-square-o{
+  margin-right:5px;
+}
+.panel-danger{
+  margin-right:220px;
+}
 .btn-info{
   margin-left:120px;
   margin-top: 7px;
+}
+.fa-pencil-square-o{
+  margin-right:5px;
 }
 .content {
   -webkit-animation: bounceInLeft 1s;
