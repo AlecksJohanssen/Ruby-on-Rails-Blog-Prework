@@ -7,7 +7,7 @@
             <% @articles.each do |article| %>
     <div class="card animated bounceInUp">
             <% if logged_in? %>  
-<nav class="cd-stretchy-nav edit-content">
+            <nav class="cd-stretchy-nav edit-content">
             <a class="cd-nav-trigger" href="">
             </a>
             <ul>
@@ -35,9 +35,16 @@
                         Tags:
                         <% article.tags.each do |tag| %>
                         <%= link_to tag.name, tag_path(tag), class:'label label-default' %>
-
                         <% end %>
-                    </p>       
+                         </p> 
+<p class="col-md-6 text-xs-left pull-left" style="margin-bottom:0px;">
+                        <% if article.created_at === article.updated_at %>
+                        Created at: <%= article.created_at %>
+                        <% else %>
+                        Updated at: <%= article.updated_at %>
+                        <% end %>
+                        </p>
+                         
   </div>
 </div>
             </div>
