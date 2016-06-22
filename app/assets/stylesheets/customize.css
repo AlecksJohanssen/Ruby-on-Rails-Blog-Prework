@@ -18,8 +18,11 @@ color: #fff!important;
 }
 .btn-warning{
   margin-top:10px;
+  margin-left:120px;
 }
-
+.alert-info{
+  text-align: center;
+}
 .box-row
 {
   margin-right:30rem;

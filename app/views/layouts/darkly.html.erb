@@ -13,9 +13,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
-
     <%= stylesheet_link_tag "darkly", :media => "all" %>
-
     <%= yield(:page_stylesheet) if content_for?(:page_stylesheet) %>
   </head>
   <nav class="navbar navbar-inverse">
@@ -70,15 +68,21 @@
       <%= yield %>
     </div>    
   <div class="col-md-4" id="sidebar">
-      <div class="card content" id="intro-image" >
+  <div class="panel panel-default">
+  <div class="panel-body">
+    <div class="card content" id="intro-image" >
         <%= image_tag("mrharley.jpg", :alt => "Blog Image") %>
-          <div class="card-block " style="padding-top:30px">
-              <h4 class="card-title ">Alecks Johanssen's Blog</h4>
-              <p class="card-text body_text" style="text-align: justify;">Hello CoderSchool, thank you for taking time to read this blog. I'm Alecks Johanssen and next to me is the the most awesomeness teacher I have ever met :P, I'm proudly to introduce to you my very first Ruby on Rails Application. To get started please click the Button below!.
-              </p>
-          </div>
         </div>
-  <div class="card-footer text-muted text-xs-center" id="intro-image">
+  </div>
+</div>
+        <div class="panel panel-default" style="margin-top:10px">
+          <div class="panel-heading"><h4 class="card-title ">Alecks Johanssen's Blog</h4></div>
+            <div class="panel-body">
+            <p class="card-text body_text" style="text-align: justify;">Hello CoderSchool, thank you for taking time to read this blog. I'm Alecks Johanssen and next to me is the the most awesomeness teacher I have ever met :P, I'm proudly to introduce to you my very first Ruby on Rails Application. To get started please click the Button below!.
+              </p>
+            </div>
+          </div
+  <div class="card-footer text-muted text-xs-center" id="intro-image" ">
       <% if logged_in? %>          
           <%= link_to "Sign Out", logout_path, class: "btn btn-success" %> 
             <div class="alert alert-success" style="margin-top:13px">
@@ -90,7 +94,6 @@
             <strong>Currently as </strong> Guest
             </div>
           <% end %>
-      </div>
         <% if logged_in? %>
           <div class="card-footer text-muted text-xs-center" id="card-show">
             <div class="card-block">
@@ -100,7 +103,8 @@
         <div class="alert alert-success" role="alert" id="success-alert" style="margin-top:10px">
             <p id="notice" style="margin-left:9.5rem"><%= notice %></p>
             </div>
-              </div>
+            </div>
+            
 <script>
   jQuery(document).ready(function() {
   if ($('.cd-stretchy-nav').length > 0) {
