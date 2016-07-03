@@ -4,12 +4,15 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+
     @articles = Article.all
+    @articles = Article.order(:created_at => 'desc')
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     # Searching
     if params[:search]
       @articles = Article.search(params[:search])
     end
+
   end
   # GET /articles/1
   # GET /articles/1.json
@@ -26,6 +29,8 @@ end
   # GET /articles/new
   def new
     @article = Article.new
+
+
   
   end
 
@@ -36,8 +41,8 @@ end
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(article_params)
 
+    @article = Article.new(article_params)
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
@@ -76,6 +81,7 @@ end
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

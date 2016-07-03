@@ -9,6 +9,9 @@ class Article < ActiveRecord::Base
   def impression_count
     impressions.size
   end
+  def newest_list
+    self.Article.order("created_at").last
+  end
   def unique_impression_count
     impressions.group(:ip_address).size 
   end
