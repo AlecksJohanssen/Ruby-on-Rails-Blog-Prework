@@ -3,25 +3,27 @@
  <div class="login-panel pull-right">
  <div class="panel panel-default" style="padding-right:80px">
   <div class="panel-body">
-    <fieldset>
   <legend>LogIn</legend> 
- <div class="form-group"> 
-  <%= form_tag login_sessions_path,class:'', method: :post do %>
+   <div class="form-group">
+  <%= form_for login_sessions_path,class:'', method: :post do %>
  <label for="inputEmail" class="col-lg-2 control-label">Email</label> 
- <div class="col-lg-10"> <%= text_field_tag :email, "", class: 'form-control' %> 
- </div> 
- </div> 
- <div class="form-group"> 
+ <div class="col-lg-10"> 
+ <%= text_field_tag :email, "", class: 'form-control' %>
+ </div>
+ 
  <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-  <div class="col-lg-10"> <%= password_field_tag :password, "", class: 'form-control'%>
-   </div> 
-   </div> 
+  <div class="col-lg-10"> 
+  <%= password_field_tag :password, "", class: 'form-control'%>
+  </div>
+  </div>
   <button type="reset" class="btn btn-default">Cancel</button> 
-  <button type="submit" class="btn btn-primary" >Submit</button>
-   </fieldset> 
-   </div> 
+  <button type="submit" class="btn btn-primary" data-no-turbolink="true">Submit</button>
+  </div>
+  <%end%> 
    </div>
   </div>
-</div>
-<%end%>
+  </div>
+  </div>
+
+
 
