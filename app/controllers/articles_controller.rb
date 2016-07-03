@@ -37,6 +37,7 @@ end
   # POST /articles.json
   def create
     @article = Article.new(article_params)
+    @article = Article.order("created_at").last
 
     respond_to do |format|
       if @article.save
